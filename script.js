@@ -187,17 +187,17 @@ function displayRegionalResults(regionalName, regionalInfo, municipalData) {
       <h2> ${regionalName}</h2>
     
       <div class="info-pair">
-        <span><strong>Chefe REPDEC:</strong> ${regionalInfo['CH_REPDEC'] || 'Não informado'}</span>
-        <span><strong>Contato:</strong> ${regionalInfo['CH_Contato'] || 'Não informado'}</span>
+        <span><strong>Chefe REPDEC:</strong> ${regionalInfo['CH_REPDEC'] || '-'}</span>
+        <span><strong>Contato:</strong> ${regionalInfo['CH_Contato'] || '-'}</span>
       </div>
     
       <div class="info-pair">
-        <span><strong>Auxiliar REPDEC:</strong> ${regionalInfo['AUX_REPDEC'] || 'Não informado'}</span>
-        <span><strong>Contato:</strong> ${regionalInfo['AUX_Contato'] || 'Não informado'}</span>
+        <span><strong>Auxiliar REPDEC:</strong> ${regionalInfo['AUX_REPDEC'] || '-'}</span>
+        <span><strong>Contato:</strong> ${regionalInfo['AUX_Contato'] || '-'}</span>
       </div>
     
       <div class="info-pair">
-        <span><strong>Email REPDEC:</strong> ${regionalInfo['Email_REPDEC'] || 'Não informado'}</span>
+        <span><strong>Email REPDEC:</strong> ${regionalInfo['Email_REPDEC'] || '-'}</span>
       </div>
     `;
         resultsContainer.appendChild(regionalInfoCard);
@@ -223,6 +223,7 @@ function displayRegionalResults(regionalName, regionalInfo, municipalData) {
                 <th>Coordenador</th>
                 <th>Telefone</th>
                 <th>Outros Telefones</th>
+                <th>Email Institucional</th>
                 <th>Email</th>
             </tr>
         </thead>
@@ -234,7 +235,7 @@ function displayRegionalResults(regionalName, regionalInfo, municipalData) {
                     <td>${contact.Telefone || ''}</td>
                     <td>${contact['Outros Contatos'] || ''}</td>
                     <td>${contact['Email COMPDEC'] || ''}</td>
-                    
+                    <td>${contact['Email'] || ''}</td>
                 </tr>
             `).join('')}
         </tbody>
@@ -270,10 +271,10 @@ function displayResults(data) {
             regionalInfoHtml = `
                 <div class="regional-details">
                     <h4>${regionalInfo.REPDEC}</h4>
-                    <p><strong>Chefe REPDEC:</strong> ${regionalInfo['CH_REPDEC'] || 'Não informado'}</p>
-                    <p><strong>Contato Chefe:</strong> ${regionalInfo['CH_Contato'] || 'Não informado'}</p>
-                    <p><strong>Auxiliar REPDEC:</strong> ${regionalInfo['AUX_REPDEC'] || 'Não informado'}</p>
-                    <p><strong>Contato Auxiliar:</strong> ${regionalInfo['AUX_Contato'] || 'Não informado'}</p>
+                    <p><strong>Chefe REPDEC:</strong> ${regionalInfo['CH_REPDEC'] || '-'}</p>
+                    <p><strong>Contato Chefe:</strong> ${regionalInfo['CH_Contato'] || '-'}</p>
+                    <p><strong>Auxiliar REPDEC:</strong> ${regionalInfo['AUX_REPDEC'] || '-'}</p>
+                    <p><strong>Contato Auxiliar:</strong> ${regionalInfo['AUX_Contato'] || '-'}</p>
                 </div>
             `;
         }
