@@ -1,0 +1,347 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef0f2; /* A lighter, neutral background */
+    color: #333; /* Darker grey for text */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+
+/* REPDEC um do lado do outro*/
+.info-pair {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap; /* útil se a tela for pequena */
+}
+
+.info-pair span {
+  min-width: 200px; /* opcional, para alinhamento mais uniforme */
+  color:  #c0d0e0;
+}
+
+/* .logo {
+    max-height: 100px;
+    width: auto; /* Changed from center to auto for proper scaling */
+/* } */
+
+.logo-esquerda {
+    height: 120px;
+    max-width: 140px;
+}
+
+.logo-direita {
+    height: 120px;
+    max-width: auto;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center items */
+  gap: 20px; /* Add some gap */
+}
+
+.container {
+    width: 95%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow-x: auto;
+    background-color: #0d2c4b; /* Dark blue background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #cbc8c8; /* White text for contrast */
+    text-align: center; /* Center align title */
+    margin-bottom: 10px; /* Adjusted margin */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    font-size: 40px; /* Adjust font size for better balance */
+    margin-top: 0;
+}
+
+.head > div {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #cbc8c8; /* Lighter text for contrast */
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.search-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2a5a8a; /* Border color matching theme */
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #c0d0e0; /* Lighter text for tabs */
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.tab-btn:hover {
+    color: #ffffff; /* White on hover */
+}
+
+.tab-btn.active {
+    color: #d95f02; /* Orange accent remains for active state */
+    border-bottom-color: #d95f02;
+}
+
+.search-form {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-form.active {
+    display: flex; /* Show active form */
+}
+
+#search-coordinator-form {
+    flex-direction: column;
+}
+
+#search-regional-form {
+    flex-direction: column;
+}
+
+.search-form input, .search-form select {
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    padding: 12px;
+    border: 1px solid #3a5f85; /* Themed border */
+    border-radius: 4px;
+    font-size: 16px;
+    min-width: 200px;
+    background-color: #f0f4f8; /* Slightly off-white background for inputs */
+    color: #333; /* Dark text for readability in inputs */
+}
+
+.search-form button {
+    padding: 12px 20px;
+    background-color: #d95f02; /* Burnt orange from CEPDEC logo */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.search-form button:hover {
+    background-color: #b75002; /* Darker shade of orange for hover */
+}
+
+.search-form button:active {
+    transform: scale(0.98);
+}
+
+#download-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+
+#download-container button, #download-container select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #3a5f85;
+}
+
+#message-area {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #e0e0e0; /* Light text color */
+    min-height: 27px; /* Reserve space to prevent layout shift */
+}
+
+#results-container {
+    display: grid;
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: #1a426a; /* Darker card background */
+    border: 1px solid #2a5a8a; /* Themed border */
+    border-left: 5px solid #d95f02; /* Burnt orange accent */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease-out forwards;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow */
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #ffffff; /* White heading */
+}
+
+.contact-card .municipio-subhead {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #c0d0e0; /* Light sub-heading */
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.contact-card p {
+    margin: 8px 0;
+    text-align: left;
+    line-height: 1.6;
+    color: #efedec; /* Light text */
+}
+
+.contact-card p strong {
+    color: #ffffff; /* White for strong text */
+    min-width: 150px;
+    display: inline-block;
+}
+
+.regional-details {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #2a5a8a; /* Themed separator */
+}
+
+.regional-details h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #d95f02; /* Accent color for the regional sub-header */
+    font-size: 1.1em;
+}
+
+.regional-info-card {
+    background-color: #1a426a; /* Darker card background */
+    border: 1px solid #2a5a8a; /* Themed border */
+    border-left: 5px solid #d95f02;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.regional-info-card h2 {
+    margin-top: 0;
+    color: #ffffff; /* White heading */
+}
+
+.regional-info-card p {
+    text-align: left;
+    margin: 8px 0;
+    color: #c0d0e0; /* Light text */
+}
+
+.regional-table-container {
+    overflow-x: auto; /* For responsive tables */
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.regional-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a426a; /* Dark background for table */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    color: #e0e0e0; /* Light text for table content */
+}
+
+.regional-table th,
+.regional-table td {
+    padding: 12px 15px;
+    border: 1px solid #2a5a8a; /* Themed border */
+    text-align: left;
+    white-space: nowrap; /* Prevent long content from wrapping, rely on horizontal scroll */
+}
+
+.regional-table th {
+    background-color: #0d2c4b; /* Matching container background */
+    font-weight: 600;
+    color: #ffffff; /* White header text */
+}
+
+.regional-table tbody tr:nth-of-type(even) {
+    background-color: #254a70; /* Slightly different shade for zebra striping */
+}
+
+.regional-table tbody tr:hover {
+    background-color: #3a70b2; /* Lighter blue for hover */
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .head {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 24px;
+        gap: 0; /* No gap needed in column layout */
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+    .tab-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .container {
+        padding: 15px;
+    }
+    #download-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #download-container select {
+        max-width: 100%;
+    }
+}

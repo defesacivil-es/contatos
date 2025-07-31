@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Define o Favicon -->
+    <link rel="icon" href="imagem/dist-cepdec.png" type="image/png">
+    <title>Busca de Contatos</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+       <div class="head">
+            <img src="imagem/CBMES.png" alt="Logo CBMES" class="logo-esquerda">
+            <div>
+              <h1>
+                <span>CONTATOS COMPDEC</span>
+              </h1>
+              <p>Realize a busca pelo nome do coordenador e/ou pelo município.</p>
+            </div>
+            <img src="imagem/Cepdec.png" alt="Logo CEPDEC" class="logo-direita">
+       </div>
+
+        <div class="search-tabs">
+            <button id="tab-coordinator" class="tab-btn active">Por Coordenador/Município</button>
+            <button id="tab-regional" class="tab-btn">Por Regional</button>
+        </div>
+
+        <div id="search-coordinator-form" class="search-form active">
+            <input type="text" id="name-input" placeholder="Nome do Coordenador">
+            <select id="city-select">
+                <option value="">Selecione um Município</option>
+            </select>
+            <button id="search-btn">Buscar</button>
+        </div>
+
+        <div id="search-regional-form" class="search-form">
+             <select id="regional-select">
+                <option value="">Selecione uma Regional</option>
+            </select>
+            <button id="search-regional-btn">Buscar</button>
+        </div>
+
+        <div id="message-area"></div>
+        <div id="results-container"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
