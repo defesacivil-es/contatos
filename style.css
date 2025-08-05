@@ -311,9 +311,11 @@ p {
 @media (max-width: 768px) {
     body {
         padding: 10px;
+        margin-right: 14px;
     }
     .container {
-        padding: 20px;
+        padding: 0px;
+            
     }
     .head {
         flex-direction: column;
